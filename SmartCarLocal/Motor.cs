@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Devices.Gpio;
 
-namespace SmartCar
+namespace SmartCarLocal
 {
     class Motor
     {

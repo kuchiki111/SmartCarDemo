@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SmartCar
+namespace SmartCarLocal
 {
     class SmartCar
     {
@@ -41,10 +41,17 @@ namespace SmartCar
             MotorControlMoved(singleMotor.Lift, Direction.Stop, speed);
             MotorControlMoved(singleMotor.Right, Direction.Foward, speed);
         }
+
         public void TurnRight(int speed)
         {
             MotorControlMoved(singleMotor.Lift, Direction.Foward, speed);
             MotorControlMoved(singleMotor.Right, Direction.Stop, speed);
+        }
+
+        public void TurnAround(int speed)
+        {
+            MotorControlMoved(singleMotor.Lift, Direction.Foward, speed);
+            MotorControlMoved(singleMotor.Right, Direction.Backward, speed);
         }
 
         public void MotorControlMoved(singleMotor motor,Direction direction,int speed)
